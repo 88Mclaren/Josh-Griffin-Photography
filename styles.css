@@ -1,20 +1,279 @@
-*
-{
-  margin: 0px;
-  padding: 0px;
+
+/* GENERAL PAGE SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body
-{
-  font-family: Georgia;
-  font-size: 14px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ef;
+    color: #333;
 }
 
-header
-{
-  height: 85px;
-  display: flex;
-  justify-content: space-between;
-  background: gray;
-  color: white;
-} 
+
+/* HEADER */
+
+header {
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    position: relative;
+    z-index: 100;
+}
+
+.logo h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #a68b68;
+}
+
+
+/* PORTFOLIO DROPDOWN */
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #333;
+    padding: 10px 0;
+}
+
+.dropbtn:hover {
+    color: #a68b68;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    z-index: 200;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 14px 18px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0ece6;
+    color: #a68b68;
+}
+
+/* Desktop hover support */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* HERO CAROUSEL */
+
+.hero {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SLIDE TEXT */
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.slide-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.slide-text p {
+    font-size: 20px;
+}
+
+
+/* CAROUSEL BUTTONS */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* WELCOME SECTION */
+
+.welcome {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* LEARN MORE BUTTON */
+
+.learn-more {
+    display: inline-block;
+    background-color: #a68b68;
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #80694d;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 65vh;
+    }
+
+    .slide-text h1 {
+        font-size: 30px;
+    }
+
+    .slide-text p {
+        font-size: 16px;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+    .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
