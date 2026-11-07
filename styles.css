@@ -9,3 +9,12 @@ body
   font-family: Georgia, Times New Roman;
   font-size: 14px;
 }
+
+header
+{
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  background: gray;
+  color: white;
+  
