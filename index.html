@@ -1,18 +1,128 @@
-<!Doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Home</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Josh Griffin Photography</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <img class="logo" alt="">
-    <div class ="navbar">
-      <button>Portfolio</button>
-      <button><a href="about.html">About</a></button>
-      <button><a href="contact.html">Contact</a></button>
-      <button><a href=""></a></button>
-    </div>
-  </header>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <h2>Josh Griffin Photography</h2>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+
+            <a href="index.html">Home</a>
+
+            <!-- Portfolio Dropdown -->
+            <div class="dropdown">
+
+                <button class="dropbtn" type="button">
+                    Portfolio ▾
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="events.html">Event Photography</a>
+                    <a href="portraits.html">Portrait Photography</a>
+                    <a href="family.html">Family Photography</a>
+                </div>
+
+            </div>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Carousel -->
+    <section class="hero">
+
+        <div class="carousel">
+
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="images/slide1.jpg" alt="Photography">
+
+                <div class="slide-text">
+                    <h1>Capturing Life's Moments</h1>
+                    <p>Memories that last a lifetime.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="Event Photography">
+
+                <div class="slide-text">
+                    <h1>Every Moment Matters</h1>
+                    <p>Beautifully capturing your special occasions.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="Portrait Photography">
+
+                <div class="slide-text">
+                    <h1>Your Story, Your Memories</h1>
+                    <p>Photography that tells your story.</p>
+                </div>
+            </div>
+
+            <!-- Carousel Buttons -->
+            <button class="prev" onclick="changeSlide(-1)">
+                &#10094;
+            </button>
+
+            <button class="next" onclick="changeSlide(1)">
+                &#10095;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+
+        <h2>Welcome to Josh Griffin Photography</h2>
+
+        <p>
+            I specialize in capturing meaningful moments through
+            event, portrait, and family photography. My goal is to
+            create photographs that you can look back on and enjoy
+            for years to come.
+        </p>
+
+        <a href="about.html" class="learn-more">
+            Learn More
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>&copy; 2026 Josh Griffin Photography. All Rights Reserved.</p>
+
+    </footer>
+
 </body>
 </html>
