@@ -1,126 +1,305 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="Josh Griffin Photography - Professional event, portrait, family and wildlife photography.">
+
     <title>Josh Griffin Photography</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
+    <!-- HEADER -->
+    <header class="header">
 
-        <div class="logo">
-            <h2>Josh Griffin Photography</h2>
-        </div>
+        <a href="index.html" class="logo">
+            <span>JOSH GRIFFIN</span>
+            <small>PHOTOGRAPHY</small>
+        </a>
 
         <!-- Navigation -->
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
 
-            <a href="index.html">Home</a>
+            <a href="index.html" class="nav-link">Home</a>
 
-            <!-- Portfolio Dropdown -->
             <div class="dropdown">
 
                 <button class="dropbtn" type="button">
-                    Portfolio ▾
+                    Portfolio <span>⌄</span>
                 </button>
 
                 <div class="dropdown-content">
-                    <a href="events.html">Event Photography</a>
-                    <a href="portraits.html">Portrait Photography</a>
-                    <a href="family.html">Family Photography</a>
+                    <a href="events.html">Events</a>
+                    <a href="portraits.html">Portraits</a>
+                    <a href="family.html">Family</a>
+                    <a href="wildlife.html">Wildlife</a>
                 </div>
 
             </div>
 
-            <a href="about.html">About</a>
+            <a href="about.html" class="nav-link">About</a>
 
-            <a href="contact.html">Contact</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+
+            <a href="contact.html" class="nav-link">Contact</a>
+
+            <a href="client-login.php" class="client-link">
+                Client Galleries
+            </a>
 
         </nav>
+
+        <!-- Mobile Menu -->
+        <button class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navbar">
+
+            ☰
+
+        </button>
 
     </header>
 
 
-    <!-- Hero Carousel -->
-    <section class="hero">
+    <main>
 
-        <div class="carousel">
+        <!-- HERO SECTION -->
+        <section class="hero">
 
-            <!-- Slide 1 -->
-            <div class="slide active">
-                <img src="./images/slide1.jpg" alt="Photography">
+            <img src="images/hero.jpg"
+                alt="Featured photography by Josh Griffin"
+                class="hero-image">
 
-                <div class="slide-text">
-                    <h1>Capturing Life's Moments</h1>
-                    <p>Memories that last a lifetime.</p>
-                </div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    JOSH GRIFFIN PHOTOGRAPHY
+                </p>
+
+                <h1>
+                    Stories Worth<br>
+                    Remembering.
+                </h1>
+
+                <p>
+                    Authentic moments. Timeless photographs.
+                </p>
+
+                <a href="#portfolio" class="hero-button">
+                    EXPLORE PORTFOLIO
+                </a>
+
             </div>
 
-            <!-- Slide 2 -->
-            <div class="slide">
-                <img src="images/slide2.jpg" alt="Event Photography">
+        </section>
 
-                <div class="slide-text">
-                    <h1>Every Moment Matters</h1>
-                    <p>Beautifully capturing your special occasions.</p>
+
+        <!-- INTRODUCTION -->
+        <section class="intro">
+
+            <p class="section-label">WELCOME</p>
+
+            <h2>
+                Capturing moments.<br>
+                Preserving memories.
+            </h2>
+
+            <p class="intro-text">
+
+                Photography is about more than taking pictures.
+                It is about capturing the moments, emotions,
+                and experiences that make life meaningful.
+
+                Explore my work in event, portrait, family,
+                and wildlife photography.
+
+            </p>
+
+        </section>
+
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio" id="portfolio">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">MY WORK</p>
+                    <h2>Selected Photography</h2>
                 </div>
+
+                <a href="events.html" class="view-all">
+                    VIEW ALL WORK →
+                </a>
+
             </div>
 
-            <!-- Slide 3 -->
-            <div class="slide">
-                <img src="images/slide3.jpg" alt="Portrait Photography">
 
-                <div class="slide-text">
-                    <h1>Your Story, Your Memories</h1>
-                    <p>Photography that tells your story.</p>
-                </div>
+            <div class="portfolio-grid">
+
+                <!-- Events -->
+                <a href="events.html" class="portfolio-card">
+
+                    <img src="images/events.jpg"
+                        alt="Event photography">
+
+                    <div class="portfolio-caption">
+                        <h3>Events</h3>
+                        <p>Moments worth celebrating</p>
+                    </div>
+
+                </a>
+
+
+                <!-- Portraits -->
+                <a href="portraits.html" class="portfolio-card">
+
+                    <img src="images/portraits.jpg"
+                        alt="Portrait photography">
+
+                    <div class="portfolio-caption">
+                        <h3>Portraits</h3>
+                        <p>Personality through photography</p>
+                    </div>
+
+                </a>
+
+
+                <!-- Family -->
+                <a href="family.html" class="portfolio-card">
+
+                    <img src="images/family.jpg"
+                        alt="Family photography">
+
+                    <div class="portfolio-caption">
+                        <h3>Family</h3>
+                        <p>Memories together</p>
+                    </div>
+
+                </a>
+
+
+                <!-- Wildlife -->
+                <a href="wildlife.html" class="portfolio-card">
+
+                    <img src="images/wildlife.jpg"
+                        alt="Wildlife photography">
+
+                    <div class="portfolio-caption">
+                        <h3>Wildlife</h3>
+                        <p>Beauty in the natural world</p>
+                    </div>
+
+                </a>
+
             </div>
 
-            <!-- Carousel Buttons -->
-            <button class="prev" onclick="changeSlide(-1)">
-                &#10094;
-            </button>
+        </section>
 
-            <button class="next" onclick="changeSlide(1)">
-                &#10095;
-            </button>
+
+        <!-- ABOUT -->
+        <section class="about-section">
+
+            <div class="about-image">
+
+                <img src="images/hero.jpg"
+                    alt="Photography by Josh Griffin">
+
+            </div>
+
+            <div class="about-content">
+
+                <p class="section-label">BEHIND THE CAMERA</p>
+
+                <h2>
+                    A passion for<br>
+                    capturing life.
+                </h2>
+
+                <p>
+
+                    I'm Josh, a photographer passionate about
+                    preserving meaningful moments through
+                    photography.
+
+                    My goal is to create photographs that tell
+                    stories and allow people to revisit their
+                    favorite memories for years to come.
+
+                </p>
+
+                <a href="about.html" class="text-link">
+                    MORE ABOUT ME →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="contact-section">
+
+            <p class="section-label">LET'S CONNECT</p>
+
+            <h2>
+                Let's create something<br>
+                memorable.
+            </h2>
+
+            <p>
+                Have an event, portrait session, or photography
+                project in mind?
+            </p>
+
+            <a href="contact.html" class="contact-button">
+                GET IN TOUCH
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            JOSH GRIFFIN PHOTOGRAPHY
+        </div>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
 
         </div>
 
-    </section>
-
-
-    <!-- Welcome Section -->
-    <section class="welcome">
-
-        <h2>Welcome to Josh Griffin Photography</h2>
-
         <p>
-            I specialize in capturing meaningful moments through
-            event, portrait, and family photography. My goal is to
-            create photographs that you can look back on and enjoy
-            for years to come.
+            &copy; 2026 Josh Griffin Photography.
+            All Rights Reserved.
         </p>
-
-        <a href="about.html" class="learn-more">
-            Learn More
-        </a>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>&copy; 2026 Josh Griffin Photography. All Rights Reserved.</p>
 
     </footer>
 
