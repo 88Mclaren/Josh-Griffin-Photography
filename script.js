@@ -1,62 +1,39 @@
 
-/* PHOTO CAROUSEL */
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
 
-let currentSlide = 0;
+// Open and close mobile navigation
+menuToggle.addEventListener("click", () => {
 
-const slides = document.querySelectorAll(".slide");
+    const isOpen = navbar.classList.toggle("active");
 
-function showSlide(index) {
+    menuToggle.setAttribute("aria-expanded", isOpen);
 
-    if (slides.length === 0) return;
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 
-    slides[currentSlide].classList.remove("active");
+    menuToggle.textContent = isOpen ? "✕" : "☰";
 
-    currentSlide = (index + slides.length) % slides.length;
+});
 
-    slides[currentSlide].classList.add("active");
-}
+// Close navigation after selecting a link
+navbar.querySelectorAll("a").forEach(link => {
 
+    link.addEventListener("click", () => {
 
-// Previous and Next Buttons
+        navbar.classList.remove("active");
 
-function changeSlide(direction) {
-    showSlide(currentSlide + direction);
-}
+        menuToggle.setAttribute("aria-expanded", "false");
 
+        menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
 
-// Automatically change slides every 4 seconds
-
-if (slides.length > 1) {
-    setInterval(function() {
-        showSlide(currentSlide + 1);
-    }, 4000);
-}
-
-
-/* PORTFOLIO DROPDOWN */
-
-const dropdown = document.querySelector(".dropdown");
-const dropButton = document.querySelector(".dropbtn");
-
-if (dropdown && dropButton) {
-
-    dropButton.addEventListener("click", function(event) {
-
-        event.stopPropagation();
-
-        dropdown.classList.toggle("show");
+        menuToggle.textContent = "☰";
 
     });
 
-
-    // Close dropdown when clicking outside
-
-    document.addEventListener("click", function(event) {
-
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove("show");
-        }
-
-    });
-
-}
+});
